@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Punk Beers</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Punk Api</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="enter_text">Enter Beer</string>
+    <string name="food_pairing">Food Pairing</string>
+    <string name="beer_tips">Beer Tips</string>
+    <string name="contributed_by">Contibuted By</string>
+    <string name="beer_description">Description</string>
+    <string name="beer_tagline">Tagline</string>
+</resources>

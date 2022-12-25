@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="beers"
+            type="com.example.punkbeers.model.Beer" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/card_layout_margin"
+        android:layout_marginLeft="@dimen/card_layout_margin"
+        android:layout_marginTop="@dimen/card_layout_margin"
+        android:layout_marginEnd="@dimen/card_layout_margin"
+        android:layout_marginRight="@dimen/card_layout_margin"
+        android:clickable="true"
+        card_view:cardElevation="@dimen/card_layout_elevation"
+        android:focusable="true"
+        card_view:cardBackgroundColor="@color/colorCardView"
+        card_view:cardCornerRadius="@dimen/card_layout_corner_radius">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_margin="8dp"
+                imageUrl = "@{beers.imageUrl}"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/iv_card_height"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_weight="9"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/iv_card_height"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="@{beers.name}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/tv_card_layout_margin"
+                    android:layout_marginLeft="@dimen/tv_card_layout_margin"
+                    android:layout_marginTop="@dimen/tv_card_layout_margin"
+                    android:layout_marginEnd="@dimen/tv_card_layout_margin"
+                    android:layout_marginRight="@dimen/tv_card_layout_margin"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/tv_card_text_size"
+                    android:textStyle="bold"
+                    tools:text="HEADLINE TITLE" />
+
+                <TextView
+                    android:text="@{beers.description}"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/tv_card_layout_margin"
+                    android:layout_marginLeft="@dimen/tv_card_layout_margin"
+                    android:layout_marginEnd="@dimen/tv_card_layout_margin"
+                    android:layout_marginRight="@dimen/tv_card_layout_margin"
+                    android:layout_marginBottom="@dimen/tv_card_layout_margin"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/tv_card_text_size"
+                    tools:text="HEADLINE TITLE\ndd\ndd\nff\ndd\ndfdfefefefef" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</layout>
